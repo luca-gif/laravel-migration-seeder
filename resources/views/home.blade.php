@@ -12,17 +12,21 @@
                 <li>Codice treno: {{ $train->codice_treno }}</li>
                 <li>Numero carrozze: {{ $train->numero_carrozze }}</li>
                 <li>In orario?:
-                    @if ($train->in_time === 1)
-                        Si
+                    @if ($train->is_canceled === 1)
+                        <span>No</span>
                     @else
-                        No
+                        @if ($train->on_time === 1)
+                            <span>Si</span>
+                        @else
+                            <span>No</span>
+                        @endif
                     @endif
                 </li>
                 <li>Cancellato?:
                     @if ($train->is_canceled === 1)
-                        Si
+                        <span>Si</span>
                     @else
-                        No
+                        <span>No</span>
                     @endif
                 </li>
             </div>
