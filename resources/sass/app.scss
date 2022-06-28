@@ -1,1 +1,10 @@
-//
+li {
+    list-style: none;
+}
+
+.card {
+    margin: 10px;
+    background-image: linear-gradient(#1c92d2, #f2fcfe);
+    padding: 10px;
+    width: calc(100%/4);
+}
